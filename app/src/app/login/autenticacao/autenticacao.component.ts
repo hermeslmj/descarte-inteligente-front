@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { Login } from 'src/app/shared/models/Login';
 import { LoginService } from '../login.service';
 
 
@@ -25,21 +26,36 @@ export class AutenticacaoComponent implements OnInit {
   ngOnInit(): void {}
 
   login(): void {
-    this.loginService.login(this.email.value,this.password.value).subscribe(
-      loggedIn => {
-        
-        if(loggedIn) {
-          this.toastrService.success("Login realizado com sucesso");
-          this.router.navigate(['/anuncios/lista']);
+
+
+    if(this.email.value == "" || this.password.value == "")
+    {
+      this.toastrService.error("Email ou senha em branco");
+    }
+    else
+    {
+      let loginModel = new Login();
+      
+      loginModel.email = this.email.value;
+      loginModel.password = this.password.value;
+
+      this.loginService.login(loginModel).subscribe(
+        loggedIn => {
+          if(loggedIn) {
+            this.toastrService.success("Login realizado com sucesso");
+            this.router.navigate(['/anuncios/lista']);
+          }
+          else{
+            this.toastrService.error("Email ou Senha inválidos","Falha ao efetuar login");
+          }
+        },
+        err => {
+          console.log(err);
         }
-        else{
-          this.toastrService.error("Falha ao efetuar login");
-        }
-      },
-      err => {
-        console.log(err);
-      }
-    );
+      );
+    }
+
+   
   }
 
 }

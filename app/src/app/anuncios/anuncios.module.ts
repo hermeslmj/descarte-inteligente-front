@@ -5,6 +5,7 @@ import { DetalhesComponent } from './detalhes/detalhes.component';
 import { EdicaoComponent } from './edicao/edicao.component';
 import { AnunciosRoutingModule } from './anuncios-routing.module';
 import { ListaComponent } from './lista/lista.component';
+import { AnunciosService } from './anuncios.service';
 
 
 
@@ -13,6 +14,10 @@ import { ListaComponent } from './lista/lista.component';
   imports: [
     CommonModule,
     AnunciosRoutingModule
+  ],
+  providers: [
+    AnunciosService
   ]
+  
 })
 export class AnunciosModule { }
