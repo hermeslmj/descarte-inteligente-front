@@ -1,1 +1,54 @@
-<p>cadastro works!</p>
+<div class="container mt-5">
+    <form [formGroup]="usuarioForm">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome"  formControlName="nome"  placeholder="Nome Completo">
+                          </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" formControlName="email" placeholder="Email">
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input type="password" class="form-control" id="senha" formControlName="password"  placeholder="Senha">
+                          </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="idade">Email address</label>
+                            <input type="text" class="form-control" id="idade" formControlName="idade" placeholder="Idade">
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <!--<inpt type="text" class="form-control" id="estado"  placeholder="Estado"> -->
+                            <select id="estado" class="form-control" formControlName="estado">
+                                <option *ngFor="let estado of getEstados()" value={{estado}}>{{estado}}</option>
+                            </select>
+                          </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" class="form-control" id="cidade" formControlName="cidade" placeholder="Cidade">
+                          </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="cadastrar()">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div>
