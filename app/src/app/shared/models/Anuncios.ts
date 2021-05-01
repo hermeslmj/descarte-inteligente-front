@@ -3,5 +3,8 @@ export class Anuncios {
     titulo: string;
     descricao: string;
     categoria: string;
-    created_at: Date;
+    criado_em: Date;
+    atualizado_em: Date;
+    status: Number;
+
 }

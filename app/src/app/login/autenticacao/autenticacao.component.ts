@@ -43,6 +43,7 @@ export class AutenticacaoComponent implements OnInit {
         loggedIn => {
           if(loggedIn) {
             this.toastrService.success("Login realizado com sucesso");
+            this.loginService.gravaUsuarioStorage(loginModel.email, "602c2d9b054ab4541d40a763");
             this.router.navigate(['/anuncios/lista']);
           }
           else{

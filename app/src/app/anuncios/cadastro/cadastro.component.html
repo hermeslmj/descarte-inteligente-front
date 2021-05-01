@@ -1,1 +1,38 @@
-<p>cadastro anuncio works!</p>
+<div class="container mt-5">
+    <form [formGroup]="anuncioForm">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <div class="form-group">
+                            <label for="titulo">Título</label>
+                            <input type="text" class="form-control" id="titulo"  formControlName="titulo"  placeholder="Título">
+                          </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <div class="form-group">
+                            <label for="descricao">Descrição</label>
+                            <textarea  class="form-control" id="descricao" formControlName="descricao" cols="30" rows="10"></textarea> 
+                          </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group">
+                            <label for="categoria">Categorias</label>
+                            <select id="categoria" class="form-control" formControlName="categoria">
+                                <option *ngFor="let categoria of getCategorias()" value={{categoria._id}}>{{categoria.nome}}</option>
+                            </select>
+                          </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="cadastrar()">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div>
+

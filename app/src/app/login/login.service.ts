@@ -21,4 +21,20 @@ export class LoginService {
       dados
     );
   }
+
+  gravaUsuarioStorage(email: string, id: string) {
+    localStorage.setItem("email", email);
+    localStorage.setItem("usuario", id);
+  }
+
+  getUsuarioLogado(){
+    return localStorage.getItem("usuario");
+  }
+
+  logout() {
+    localStorage.removeItem("email");
+    localStorage.removeItem("usuario");
+  }
+
+
 }
