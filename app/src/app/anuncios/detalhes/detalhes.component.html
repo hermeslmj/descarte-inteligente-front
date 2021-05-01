@@ -1,1 +1,7 @@
-<p>detalhes anuncios works!</p>
+<div class="container mt-5">
+    <div class="row" *ngIf="anuncio != null"> 
+        <div class="col-md-12"><b>Título:</b>{{anuncio.titulo}}</div>
+        <div class="col-md-12 mt-3"><b>Descrição</b></div><div class="col-md-12">{{anuncio.descricao}}</div>
+        <div class="col-md-12 mt-3"><b>Categoria</b></div><div class="col-md-12">{{anuncio.categoria}}</div>
+    </div>   
+</div>

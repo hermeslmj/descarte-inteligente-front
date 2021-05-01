@@ -6,9 +6,9 @@ import { EdicaoComponent } from './edicao/edicao.component';
 import { ListaComponent } from './lista/lista.component';
   
 const routes: Routes = [
-  {path : 'detalhes', component : DetalhesComponent},
+  {path : 'detalhes/:id', component : DetalhesComponent},
   {path : 'cadastro', component : CadastroComponent},
-  {path : 'edicao', component : EdicaoComponent},
+  {path : 'edicao/:id', component : EdicaoComponent},
   {path : 'lista', component : ListaComponent}
 ];
   

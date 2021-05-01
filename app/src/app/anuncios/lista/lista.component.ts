@@ -9,14 +9,13 @@ import { AnunciosService } from '../anuncios.service';
 })
 export class ListaComponent implements OnInit {
 
-  private _listaAnuncios: Array<Anuncios>;
+  listaAnuncios: Array<Anuncios>;
 
   constructor(private anunciosService: AnunciosService) { }
 
   ngOnInit(): void {
     this.anunciosService.getAll().subscribe(anuncios => {
-      this._listaAnuncios = anuncios;
-      console.log(this._listaAnuncios);
+      this.listaAnuncios = anuncios;
     },
     err => {
       console.log(err);
