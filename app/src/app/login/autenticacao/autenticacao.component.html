@@ -1,10 +1,14 @@
-<div class="container mt-5">
+<div class="jumbotron">
+    <div class="container-fluid">
+      <h1 class="display-5 text-center">Login</h1>
+    </div>
+</div>
+<div class="container">
     <div class="row">
         <div class="col-md-3 hidden-sm hidden-xs"></div>
         <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Login</h5>
                     <form>
                         <div class="form-group">
                             <label for="login-email">Email</label>
@@ -18,7 +22,7 @@
                     </form>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="card-link">Não tenho cadastro</a>
+                    <a [routerLink]="['/usuarios/cadastro']" class="card-link">Não tenho cadastro</a>
                 </div>
               </div>
         </div>

@@ -1,12 +1,17 @@
-<div class="container mt-5">
+<div class="jumbotron">
+    <div class="container-fluid">
+      <h1 class="display-5 text-center">{{listaAnuncios.length}}  Anúncio(s) de lixo eletrônico disponíveis</h1>
+    </div>
+</div>
+<div class="container">
     <div class="row">
         <div class="col-md-12">
             <ul class="list-group">
                 <li class="list-group-item" *ngFor="let anuncio of listaAnuncios">
-                        <a [routerLink]="['/anuncios/detalhes/',anuncio._id]">
-                            <b>{{anuncio.titulo}}</b> 
-                            <span class="float-right">{{ anuncio.criado_em | date: 'dd/MM/yyyy hh:mm:ss' }}</span>
-                        </a>
+                    <a [routerLink]="['/anuncios/detalhes/',anuncio._id]">
+                        <b>{{anuncio.titulo}}</b> 
+                        <span class="float-right">{{ anuncio.criado_em | date: 'dd/MM/yyyy hh:mm:ss' }}</span>
+                    </a>
                 </li>
             </ul>
         </div>

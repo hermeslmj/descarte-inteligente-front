@@ -6,5 +6,4 @@ export class Anuncios {
     criado_em: Date;
     atualizado_em: Date;
     status: Number;
-
 }
