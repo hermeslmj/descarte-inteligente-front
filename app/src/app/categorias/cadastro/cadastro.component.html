@@ -1,0 +1,23 @@
+<div class="jumbotron">
+    <div class="container-fluid">
+      <h1 class="display-5 text-center">Cadastro de Categorias</h1>
+    </div>
+</div>
+<div class="container">
+    <form [formGroup]="categoriaForm">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome"  formControlName="nome"  placeholder="Nome">
+                          </div>
+                    </div>                    
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="cadastrar()">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div>
+

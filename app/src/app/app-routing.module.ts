@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AnunciosModule } from './anuncios/anuncios.module';
+import { CategoriasModule } from './categorias/categorias.module';
 import { LoginModule } from './login/login.module';
 import { PagesModule } from './pages/pages.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
@@ -17,6 +18,9 @@ const routes: Routes = [
   },
   {
     path: 'pages', loadChildren: () => PagesModule
+  },
+  {
+    path: 'categorias', loadChildren: () => CategoriasModule
   }
 ];
 

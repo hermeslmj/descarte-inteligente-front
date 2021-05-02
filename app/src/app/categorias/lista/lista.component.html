@@ -1,0 +1,18 @@
+<div class="jumbotron">
+    <div class="container-fluid">
+      <h1 class="display-5 text-center">{{listaCategorias.length}}  Categorias(s)</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let categoria of listaCategorias">
+                    <a [routerLink]="['/anuncios/edicao/',categoria._id]">
+                        <b>{{categoria.nome}}</b> 
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { UsuariosModule } from './usuarios/usuarios.module';
+
   
 @NgModule({
   declarations: [
@@ -19,7 +19,6 @@ import { UsuariosModule } from './usuarios/usuarios.module';
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    UsuariosModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
