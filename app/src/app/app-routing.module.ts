@@ -21,6 +21,9 @@ const routes: Routes = [
   },
   {
     path: 'categorias', loadChildren: () => CategoriasModule
+  },
+  {
+    path: '', loadChildren: () => PagesModule
   }
 ];
 
