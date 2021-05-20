@@ -4,15 +4,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-  
+
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { PagesModule } from './pages/pages.module';
+
 
   
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,8 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     RouterModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    PagesModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

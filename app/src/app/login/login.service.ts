@@ -31,6 +31,10 @@ export class LoginService {
     return localStorage.getItem("usuario");
   }
 
+  estahLogado() {
+    return (localStorage.getItem("usuario") ? true : false);
+  }
+
   logout() {
     localStorage.removeItem("email");
     localStorage.removeItem("usuario");

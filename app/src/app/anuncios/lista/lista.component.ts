@@ -9,11 +9,12 @@ import { AnunciosService } from '../anuncios.service';
 })
 export class ListaComponent implements OnInit {
 
-  listaAnuncios: Array<Anuncios>;
+  listaAnuncios: Array<Anuncios> = [];
 
   constructor(private anunciosService: AnunciosService) { }
 
   ngOnInit(): void {
+    
     this.anunciosService.getAll().subscribe(anuncios => {
       this.listaAnuncios = anuncios;
     },
